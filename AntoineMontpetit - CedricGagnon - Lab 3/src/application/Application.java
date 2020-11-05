@@ -6,7 +6,9 @@ import dessins_de_formes.DessinGeometrique;
  * Cette classe permet d'afficher plusieurs dessins géométriques en utilisant 
  * la classe DessinGeometrique.
  *
- * @author Vos noms
+ * @author Antoine Montpetit
+ * @author Cédric Gagnon
+ * 
  * @version Automne 2020
  */
 public class Application

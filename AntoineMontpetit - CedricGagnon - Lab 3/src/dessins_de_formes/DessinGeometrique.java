@@ -4,7 +4,8 @@ package dessins_de_formes;
  * Cette classe permet de créer plusieurs dessins géométriques. L'utilisateur
  * peut définir les dimensions (base et hauteur) du cadre qui contient la forme.
  *
- * @author Vos noms
+ * @author Antoine Montpetit
+ * @author Cédric Gagnon
  * @version Automne 2020
  */
 public class DessinGeometrique
