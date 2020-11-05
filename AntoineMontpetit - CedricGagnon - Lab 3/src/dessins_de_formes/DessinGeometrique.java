@@ -103,7 +103,7 @@ public class DessinGeometrique
 		// TODO - À faire - Étape 1
 		return true;
 	}
-
+	
 	/**
 	 * Créer une ligne horizontale.
 	 *
