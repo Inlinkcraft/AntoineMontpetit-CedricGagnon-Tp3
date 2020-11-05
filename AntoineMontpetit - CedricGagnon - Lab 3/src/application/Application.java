@@ -1,10 +1,11 @@
 package application;
+
 import java.util.Scanner;
 import dessins_de_formes.DessinGeometrique;
 
 /**
- * Cette classe permet d'afficher plusieurs dessins géométriques en utilisant 
- * la classe DessinGeometrique.
+ * Cette classe permet d'afficher plusieurs dessins géométriques en utilisant la
+ * classe DessinGeometrique.
  *
  * @author Antoine Montpetit
  * @author Cédric Gagnon
@@ -17,11 +18,11 @@ public class Application
 	 * Demande à l'utilisateur d'entrer dans la console les dimensions du cadre.
 	 * La méthode demande à l'utilisateur (dans la console) s'il veut saisir les
 	 * dimensions d'un nouveau cadre. Si l'utilisateur répond 'o' pour oui, tant
-	 * que les dimensions ne sont pas valides, la méthode redemande une
-	 * nouvelle saisie du cadre. Lorsque le cadre est saisi correctement, cette
-	 * méthode retourne un nouvel objet DessinGeometrique créé à partir des
-	 * dimensions saisies. Si l'utilisateur répond 'n' pour non, la méthode
-	 * retourne la valeur "null", à ce moment le programme se termine.
+	 * que les dimensions ne sont pas valides, la méthode redemande une nouvelle
+	 * saisie du cadre. Lorsque le cadre est saisi correctement, cette méthode
+	 * retourne un nouvel objet DessinGeometrique créé à partir des dimensions
+	 * saisies. Si l'utilisateur répond 'n' pour non, la méthode retourne la
+	 * valeur "null", à ce moment le programme se termine.
 	 * 
 	 * @return un nouvel objet DessinGeometrique si les valeurs ont été saisies
 	 *         sinon la valeur "null".
@@ -61,7 +62,7 @@ public class Application
 		DessinGeometrique forme3 = new DessinGeometrique(25, 8);
 		DessinGeometrique forme4 = new DessinGeometrique(4, 10);
 
-		// Avec valeurs prédéterminées 
+		// Avec valeurs prédéterminées
 		System.out
 				.println("On affiche les formes avec les valeurs initiales\n");
 		System.out.println("Ligne horizontale, " + forme1 + "\n");
@@ -70,24 +71,24 @@ public class Application
 		System.out.println("Ligne verticale, " + forme1 + "\n");
 		System.out.println(forme1.creerLigneVerticale() + "\n");
 
-		System.out.println("Contour carré, " + forme2 + "\n");		
-		System.out.println(forme2.gererContourCarre() + "\n");;
+		System.out.println("Contour carré, " + forme2 + "\n");
+		System.out.println(forme2.gererContourCarre() + "\n");
 
-		System.out.println("Contour rectangle, " + forme2 + "\n");		
+		System.out.println("Contour rectangle, " + forme2 + "\n");
 		System.out.println(forme2.gererContourRectangle() + "\n");
 
-		System.out.println("Triangle droit, " + forme4 + "\n");		
+		System.out.println("Triangle droit, " + forme4 + "\n");
 		System.out.println(forme4.creerTriangleDroit() + "\n");
 
-		System.out.println("Triangle gauche, " + forme3 + "\n");		
-		System.out.println(forme3.creerTriangleGauche() + "\n");	
+		System.out.println("Triangle gauche, " + forme3 + "\n");
+		System.out.println(forme3.creerTriangleGauche() + "\n");
 
 		// Difficile
 		System.out.println("Losange, " + forme3 + "\n");
 		System.out.println(forme3.creerLosange() + "\n");
 
 		// BONUS : Difficile à faire, faire à la fin,
-		//System.out.println("Cercle, " + forme3 + "\n");
+		// System.out.println("Cercle, " + forme3 + "\n");
 		// System.out.println(forme3.creerCercle() + "\n");
 
 		// Avec valeur demandée et validée
@@ -96,20 +97,20 @@ public class Application
 
 		while ((forme1 = demanderCadre()) != null)
 		{
-			System.out.println("\n" + forme1 + "\n");			
-			
-			System.out.println(forme1.creerLigneHorizontale() + "\n");				
-			
-			System.out.println(forme1.creerLigneVerticale() + "\n");			
-			
-			System.out.println(forme1.gererContourCarre() + "\n");			
-			
+			System.out.println("\n" + forme1 + "\n");
+
+			System.out.println(forme1.creerLigneHorizontale() + "\n");
+
+			System.out.println(forme1.creerLigneVerticale() + "\n");
+
+			System.out.println(forme1.gererContourCarre() + "\n");
+
 			System.out.println(forme1.gererContourRectangle() + "\n");
-			
+
 			System.out.println(forme1.creerTriangleDroit() + "\n");
-						
+
 			System.out.println(forme1.creerTriangleGauche() + "\n");
-			
+
 			System.out.println(forme1.creerLosange() + "\n");
 
 			// Mettre ici l'affichage du cercle, si vous l'avez fait...
