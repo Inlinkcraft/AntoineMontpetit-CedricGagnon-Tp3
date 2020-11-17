@@ -23,5 +23,8 @@ public class Tests
 		System.out.println(dessinGeo.gererContourCarre());
 		System.out.println(dessinGeo.gererContourRectangle());
 		
+		System.out.println(dessinGeo.creerTriangleDroit());
+		System.out.println(dessinGeo.creerTriangleGauche());
+		
 	}
 }
