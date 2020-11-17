@@ -5,6 +5,7 @@ import dessins_de_formes.DessinGeometrique;
 /*
  * Say Hello
  * Hallo
+ * World
  */
 
 public class Tests
