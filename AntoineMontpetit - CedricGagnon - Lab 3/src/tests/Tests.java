@@ -22,10 +22,6 @@ public class Tests
 		
 		System.out.println(dessinGeo.gererContourCarre());
 		System.out.println(dessinGeo.gererContourRectangle());
-=======
-
 		
-
->>>>>>> Ced's-Stuff
 	}
 }
