@@ -40,11 +40,15 @@ public class Application
 		// Si l'on change le cadre...
 		if (entree.next().toUpperCase().compareTo("O") == 0)
 		{
-
+			System.out.println("Entrez la base de la forme");
+			baseSaisie = entree.nextInt();
+			System.out.println("Entrez la hauteur de la forme");
+			hauteurSaisie = entree.nextInt();
+			retForme = new DessinGeometrique(baseSaisie,hauteurSaisie);
 			// TODO - À faire - Étape 3
-			System.out.println(
-					"Aucune saisie pour le moment!!! Complétez le code...");
-			retForme = null;
+			//System.out.println(
+			//		"Aucune saisie pour le moment!!! Complétez le code...");
+			//retForme = null;
 		}
 
 		return retForme;
@@ -87,9 +91,9 @@ public class Application
 		System.out.println("Losange, " + forme3 + "\n");
 		System.out.println(forme3.creerLosange() + "\n");
 
-		// BONUS : Difficile à faire, faire à la fin,
-		// System.out.println("Cercle, " + forme3 + "\n");
-		// System.out.println(forme3.creerCercle() + "\n");
+		// BONUS : Difficile à faire, faire à la fin,     // hautement plus facile que le reste i'll have you know
+		System.out.println("Cercle, " + forme3 + "\n");
+		System.out.println(forme3.creerCercle() + "\n");
 
 		// Avec valeur demandée et validée
 		System.out.println(
@@ -113,7 +117,7 @@ public class Application
 
 			System.out.println(forme1.creerLosange() + "\n");
 
-			// Mettre ici l'affichage du cercle, si vous l'avez fait...
+			System.out.println(forme1.creerCercle() + "\n");// Mettre ici l'affichage du cercle, si vous l'avez fait...
 		}
 		
 		System.out.println("\nMerci d'avoir utilisé ce programme !");
