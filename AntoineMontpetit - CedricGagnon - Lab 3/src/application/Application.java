@@ -115,7 +115,7 @@ public class Application
 
 			// Mettre ici l'affichage du cercle, si vous l'avez fait...
 		}
-
+		
 		System.out.println("\nMerci d'avoir utilisé ce programme !");
 	}
 }
