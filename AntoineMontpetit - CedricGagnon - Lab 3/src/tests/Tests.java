@@ -13,7 +13,7 @@ public class Tests
 		/*
 		 * Test Line
 		 */
-		DessinGeometrique dessinGeo = new DessinGeometrique(8, 4);
+		DessinGeometrique dessinGeo = new DessinGeometrique(16, 16);
 		
 		
 		System.out.println(dessinGeo.creerLigneHorizontale());
@@ -25,6 +25,8 @@ public class Tests
 		
 		System.out.println(dessinGeo.creerTriangleDroit());
 		System.out.println(dessinGeo.creerTriangleGauche());
+		
+		System.out.println(dessinGeo.creerCercle());
 		
 	}
 }

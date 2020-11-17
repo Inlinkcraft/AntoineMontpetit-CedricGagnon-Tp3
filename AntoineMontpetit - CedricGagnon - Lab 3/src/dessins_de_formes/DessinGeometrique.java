@@ -260,7 +260,15 @@ public class DessinGeometrique
 		String cercle = "";
 		int rayon = getPlusPetitCote() / 2;
 
-		// TODO - À faire - Étape 5
+		for(int i=0;i<2*rayon;i++) {
+			for(int j=0;j<2*rayon;j++) {
+				if(Math.pow(j-rayon,2)+Math.pow(i-rayon,2)<Math.pow(rayon,2)) 
+					cercle+="*";
+				else
+					cercle+=" ";
+			}
+			cercle+="\n";
+		}
 		return cercle;
 	}
 
