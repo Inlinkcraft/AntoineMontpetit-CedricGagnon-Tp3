@@ -13,10 +13,11 @@ public class Tests
 		/*
 		 * Test Line
 		 */
-		DessinGeometrique dessinGeo = new DessinGeometrique(10, 5);
+		DessinGeometrique dessinGeo = new DessinGeometrique(8, 4);
 		
 		
 		System.out.println(dessinGeo.creerLigneHorizontale());
+		System.out.println();
 		System.out.println(dessinGeo.creerLigneVerticale());
 		
 		System.out.println(dessinGeo.gererContourCarre());

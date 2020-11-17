@@ -168,9 +168,14 @@ public class DessinGeometrique
 		String contour = "";
 		for (int i = 0; i < pHauteur; i++)
 		{
-			for (int j = 0; j < pBase; j++)
+			for (int j = 0; j < pBase ; j++)
 			{
-				contour += "* ";
+				if (j == 0 || j == pBase - 1 || i == 0 || i == pHauteur - 1 ) {
+					contour += "* ";
+				}else {
+					contour += "  ";
+				}
+				
 			}
 			contour += "\n";
 		}
