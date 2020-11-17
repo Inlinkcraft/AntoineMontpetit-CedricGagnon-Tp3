@@ -19,8 +19,10 @@ public class DessinGeometrique
 	public final static int HAUTEUR_DEFAUT = 5;
 
 	// Propriétés du cadre qui délimite la forme géométrique.
-	// La base correspond au nombre de colonnes nécessaires pour dessiner la forme.
-	// La hauteur correspond au nombre de lignes nécessaires pour dessiner la forme.
+	// La base correspond au nombre de colonnes nécessaires pour dessiner la
+	// forme.
+	// La hauteur correspond au nombre de lignes nécessaires pour dessiner la
+	// forme.
 	int base = 0;
 	int hauteur = 0;
 
@@ -34,9 +36,9 @@ public class DessinGeometrique
 			setCadre(pBase, pHauteur);
 		}
 		else
-		{			
+		{
 			setCadre(BASE_DEFAUT, HAUTEUR_DEFAUT);
-			
+
 			// TODO - À faire - Étape 4
 			// Donner des valeurs aléatoires.
 		}
@@ -85,7 +87,7 @@ public class DessinGeometrique
 	 */
 	private int getPlusPetitCote()
 	{
-		//Étape 1
+		// Étape 1
 		return Math.min(base, hauteur);
 	}
 
@@ -100,10 +102,11 @@ public class DessinGeometrique
 	 */
 	public static boolean validerCadre(int pBase, int pHauteur)
 	{
-		//Étape 1
-		return pHauteur > 0 && pBase > 0 && pHauteur < HAUTEUR_MAX && pBase < BASE_MAX;
+		// Étape 1
+		return pHauteur > 0 && pBase > 0 && pHauteur < HAUTEUR_MAX
+				&& pBase < BASE_MAX;
 	}
-	
+
 	/**
 	 * Créer une ligne horizontale.
 	 *
@@ -113,13 +116,14 @@ public class DessinGeometrique
 	{
 		String ligneHorizontale = "";
 		// Étape 2a)
-		for (int i = 0; i < base; i++) {
+		for (int i = 0; i < base; i++)
+		{
 			ligneHorizontale += "*";
 		}
-		
+
 		return ligneHorizontale;
 	}
-	
+
 	/**
 	 * Créer une ligne verticale.
 	 *
@@ -129,11 +133,12 @@ public class DessinGeometrique
 	{
 		String ligneVerticale = "";
 		// Étape 2a)
-		
-		for (int i = 0; i < hauteur; i++) {
+
+		for (int i = 0; i < hauteur; i++)
+		{
 			ligneVerticale += "*\n";
 		}
-		
+
 		return ligneVerticale;
 	}
 
@@ -151,7 +156,7 @@ public class DessinGeometrique
 	/**
 	 * Gérer la création du contour d'un rectangle.
 	 *
-	 *  @return La chaîne de caractères contenant la forme.
+	 * @return La chaîne de caractères contenant la forme.
 	 */
 	public String gererContourRectangle()
 	{
@@ -168,20 +173,23 @@ public class DessinGeometrique
 		String contour = "";
 		for (int i = 0; i < pHauteur; i++)
 		{
-			for (int j = 0; j < pBase ; j++)
+			for (int j = 0; j < pBase; j++)
 			{
-				if (j == 0 || j == pBase - 1 || i == 0 || i == pHauteur - 1 ) {
+				if (j == 0 || j == pBase - 1 || i == 0 || i == pHauteur - 1)
+				{
 					contour += "*";
-				}else {
+				}
+				else
+				{
 					contour += " ";
 				}
-				
+
 			}
 			contour += "\n";
 		}
 		return contour;
 	}
-	
+
 	/**
 	 * Créer le triangle appuyé à droite
 	 *
@@ -190,21 +198,23 @@ public class DessinGeometrique
 	public String creerTriangleDroit()
 	{
 		String triangleDroit = "";
-		
-		double slope=((double)hauteur-1)/base;
-		int i=hauteur;
-		while(i>0){
-			int j=0;
-			while(j<base) {
-				if((j+1)*slope<i-1)
-					triangleDroit+=" ";
+
+		double slope = ((double) hauteur - 1) / base;
+		int i = hauteur;
+		while (i > 0)
+		{
+			int j = 0;
+			while (j < base)
+			{
+				if ((j + 1) * slope < i - 1)
+					triangleDroit += " ";
 				else
-					triangleDroit+="*";
+					triangleDroit += "*";
 				j++;
 			}
-		
-			triangleDroit+="\n";
-			
+
+			triangleDroit += "\n";
+
 			i--;
 		}
 		return triangleDroit;
@@ -218,25 +228,27 @@ public class DessinGeometrique
 	public String creerTriangleGauche()
 	{
 		String triangleGauche = "";
-		
-		double slope=((double)hauteur-1)/base;
-		int i=hauteur;
-		while(i>0){
-			int j=0;
-			while(j<base) {
-				if(j*-slope+hauteur<i)
-					triangleGauche+=" ";
+
+		double slope = ((double) hauteur - 1) / base;
+		int i = hauteur;
+		while (i > 0)
+		{
+			int j = 0;
+			while (j < base)
+			{
+				if (j * -slope + hauteur < i)
+					triangleGauche += " ";
 				else
-					triangleGauche+="*";
+					triangleGauche += "*";
 				j++;
 			}
 
-			triangleGauche+="\n";
+			triangleGauche += "\n";
 
 			i--;
 		}
 		return triangleGauche;
-	}	
+	}
 
 	/**
 	 * Créer le losange à partir du plus petit côté
@@ -248,53 +260,56 @@ public class DessinGeometrique
 		String losange = "";
 		int entre = 0;
 		int distCentre = 0;
-		int cote = getPlusPetitCote() + (Math.abs(1-getPlusPetitCote() % 2));
+		int cote = getPlusPetitCote() + (Math.abs(1 - getPlusPetitCote() % 2));
 		for (int i = 0; i < cote; i++)
 		{
-			if (i == 0 || i == cote - 1) {
+			if (i == 0 || i == cote - 1)
+			{
 				// Top - Bottom
-				for (int j = 0; j < cote/2; j++)
+				for (int j = 0; j < cote / 2; j++)
 				{
 					losange += " ";
 				}
-				
+
 				losange += "*";
-				
-				for (int j = 0; j < cote/2; j++)
+
+				for (int j = 0; j < cote / 2; j++)
 				{
 					losange += " ";
 				}
-			}else{
+			}
+			else
+			{
 				// Center
-				distCentre =  Math.abs(i - (cote/2));
+				distCentre = Math.abs(i - (cote / 2));
 				entre = cote - 2 - (2 * distCentre);
-				
+
 				for (int j = 0; j < distCentre; j++)
 				{
 					losange += " ";
 				}
-				
+
 				losange += "*";
-				
+
 				for (int j = 0; j < entre; j++)
 				{
 					losange += " ";
 				}
-				
+
 				losange += "*";
-				
+
 				for (int j = 0; j < distCentre; j++)
 				{
 					losange += " ";
 				}
 			}
-			
+
 			losange += "\n";
-			
+
 		}
-		return losange;	
+		return losange;
 	}
-	
+
 	/**
 	 * Créer le cercle à partir du plus petit côté.
 	 *
@@ -305,14 +320,17 @@ public class DessinGeometrique
 		String cercle = "";
 		int rayon = getPlusPetitCote() / 2;
 
-		for(int i=0;i<2*rayon;i++) {
-			for(int j=0;j<2*rayon;j++) {
-				if(Math.pow(j-rayon,2)+Math.pow(i-rayon,2)<Math.pow(rayon,2)) 
-					cercle+="*";
+		for (int i = 0; i < 2 * rayon; i++)
+		{
+			for (int j = 0; j < 2 * rayon; j++)
+			{
+				if (Math.pow(j - rayon, 2) + Math.pow(i - rayon, 2) < Math
+						.pow(rayon, 2))
+					cercle += "*";
 				else
-					cercle+=" ";
+					cercle += " ";
 			}
-			cercle+="\n";
+			cercle += "\n";
 		}
 		return cercle;
 	}
@@ -327,15 +345,14 @@ public class DessinGeometrique
 	{
 		return getHauteur() + " ligne(s) X " + getBase() + " colonne(s).";
 	}
-	
+
 	/**
-     * Méthode pour faire les tests sur vos méthodes
-     * @param args
-     */
-    public static void main(String[] args)
-    {
+	 * Méthode pour faire les tests sur vos méthodes
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args)
+	{
 
-        
-
-    }
+	}
 }
