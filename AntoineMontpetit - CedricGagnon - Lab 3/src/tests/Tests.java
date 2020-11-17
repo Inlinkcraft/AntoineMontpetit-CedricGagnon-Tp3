@@ -18,5 +18,8 @@ public class Tests
 		
 		System.out.println(dessinGeo.creerLigneHorizontale());
 		System.out.println(dessinGeo.creerLigneVerticale());
+		
+		System.out.println(dessinGeo.gererContourCarre());
+		System.out.println(dessinGeo.gererContourRectangle());
 	}
 }
