@@ -246,7 +246,52 @@ public class DessinGeometrique
 	public String creerLosange()
 	{
 		String losange = "";
-		// TODO - À faire Étape 2d)
+		int entre = 0;
+		int distCentre = 0;
+		int cote = getPlusPetitCote() + (Math.abs(1-getPlusPetitCote() % 2));
+		for (int i = 0; i < cote; i++)
+		{
+			if (i == 0 || i == cote - 1) {
+				// Top - Bottom
+				for (int j = 0; j < cote/2; j++)
+				{
+					losange += " ";
+				}
+				
+				losange += "*";
+				
+				for (int j = 0; j < cote/2; j++)
+				{
+					losange += " ";
+				}
+			}else{
+				// Center
+				distCentre =  Math.abs(i - (cote/2));
+				entre = cote - 2 - (2 * distCentre);
+				
+				for (int j = 0; j < distCentre; j++)
+				{
+					losange += " ";
+				}
+				
+				losange += "*";
+				
+				for (int j = 0; j < entre; j++)
+				{
+					losange += " ";
+				}
+				
+				losange += "*";
+				
+				for (int j = 0; j < distCentre; j++)
+				{
+					losange += " ";
+				}
+			}
+			
+			losange += "\n";
+			
+		}
 		return losange;	
 	}
 	

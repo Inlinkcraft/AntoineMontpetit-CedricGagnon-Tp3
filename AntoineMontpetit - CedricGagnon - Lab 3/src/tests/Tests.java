@@ -15,7 +15,6 @@ public class Tests
 		 */
 		DessinGeometrique dessinGeo = new DessinGeometrique(8, 4);
 		
-		
 		System.out.println(dessinGeo.creerLigneHorizontale());
 		System.out.println();
 		System.out.println(dessinGeo.creerLigneVerticale());
