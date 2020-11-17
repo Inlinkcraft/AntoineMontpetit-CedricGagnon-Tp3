@@ -114,7 +114,7 @@ public class DessinGeometrique
 		String ligneHorizontale = "";
 		// Étape 2a)
 		for (int i = 0; i < base; i++) {
-			ligneHorizontale += "* ";
+			ligneHorizontale += "*";
 		}
 		
 		return ligneHorizontale;
@@ -171,9 +171,9 @@ public class DessinGeometrique
 			for (int j = 0; j < pBase ; j++)
 			{
 				if (j == 0 || j == pBase - 1 || i == 0 || i == pHauteur - 1 ) {
-					contour += "* ";
+					contour += "*";
 				}else {
-					contour += "  ";
+					contour += " ";
 				}
 				
 			}
