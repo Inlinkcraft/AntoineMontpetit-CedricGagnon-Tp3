@@ -112,7 +112,11 @@ public class DessinGeometrique
 	public String creerLigneHorizontale()
 	{
 		String ligneHorizontale = "";
-		// TODO - À faire - Étape 2a)
+		// Étape 2a)
+		for (int i = 0; i < base; i++) {
+			ligneHorizontale += "*";
+		}
+		
 		return ligneHorizontale;
 	}
 	
@@ -124,7 +128,12 @@ public class DessinGeometrique
 	public String creerLigneVerticale()
 	{
 		String ligneVerticale = "";
-		// TODO - À faire - Étape 2a)
+		// Étape 2a)
+		
+		for (int i = 0; i < hauteur; i++) {
+			ligneVerticale += "*\n";
+		}
+		
 		return ligneVerticale;
 	}
 
