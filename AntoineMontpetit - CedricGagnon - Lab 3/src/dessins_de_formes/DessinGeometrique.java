@@ -178,7 +178,23 @@ public class DessinGeometrique
 	public String creerTriangleDroit()
 	{
 		String triangleDroit = "";
-		// TODO - À faire - Étape 2c)
+		
+		double slope=((double)hauteur-1)/base;
+		int i=hauteur;
+		while(i>0){
+			int j=0;
+			while(j<base) {
+				if((j+1)*slope<i-1)
+					triangleDroit+=" ";
+				else
+					triangleDroit+="*";
+				j++;
+			}
+		
+			triangleDroit+="\n";
+			
+			i--;
+		}
 		return triangleDroit;
 	}
 
@@ -190,7 +206,23 @@ public class DessinGeometrique
 	public String creerTriangleGauche()
 	{
 		String triangleGauche = "";
-		// TODO - À faire - Étape 2c)
+		
+		double slope=((double)hauteur-1)/base;
+		int i=hauteur;
+		while(i>0){
+			int j=0;
+			while(j<base) {
+				if(j*-slope+hauteur<i)
+					triangleGauche+=" ";
+				else
+					triangleGauche+="*";
+				j++;
+			}
+
+			triangleGauche+="\n";
+
+			i--;
+		}
 		return triangleGauche;
 	}	
 
