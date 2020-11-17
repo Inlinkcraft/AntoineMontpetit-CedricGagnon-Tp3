@@ -85,8 +85,8 @@ public class DessinGeometrique
 	 */
 	private int getPlusPetitCote()
 	{
-		// TODO - À faire - Étape 1
-		return 0;
+		//Étape 1
+		return Math.min(base, hauteur);
 	}
 
 	/**
@@ -100,8 +100,8 @@ public class DessinGeometrique
 	 */
 	public static boolean validerCadre(int pBase, int pHauteur)
 	{
-		// TODO - À faire - Étape 1
-		return true;
+		//Étape 1
+		return pHauteur > 0 && pBase > 0 && pHauteur < HAUTEUR_MAX && pBase < BASE_MAX;
 	}
 	
 	/**
